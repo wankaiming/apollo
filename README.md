@@ -21,30 +21,30 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 更多产品介绍参见[Apollo配置中心介绍](https://github.com/ctripcorp/apollo/wiki/Apollo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E4%BB%8B%E7%BB%8D)
 
 
-#======================================================
-环境配置：
-操作系统： CentOS Linux release 7.5.1804
-Docker： Docker version 18.05.0-ce
+# ======================================================
+* **环境配置：**
+  * 操作系统： CentOS Linux release 7.5.1804
+  * Docker： Docker version 18.05.0-ce
 
 
-###1.首先调整scripts\build.bat相关配置
+* **1.首先调整scripts\build.bat相关配置**
 
-通过maven打包出 apollo-adminservice  apollo-configservice  apollo-portal
+  * 通过maven打包出 apollo-adminservice  apollo-configservice  apollo-portal
 
-###2.然后安装mysql
+* **2.然后安装mysql**
 
-docker pull mysql:5.7
-docker run -p 13306:3306 --name mysql -v /root/mysql/conf:/etc/mysql/conf.d -v /root/mysql/logs:/logs -v /root/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+  * docker pull mysql:5.7
+  * docker run -p 13306:3306 --name mysql -v /root/mysql/conf:/etc/mysql/conf.d -v /root/mysql/logs:/logs -v /root/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
 
-###3.然后安装apollo
+* **3.然后安装apollo**
 
-将打包好的 apollo-adminservice  apollo-configservice  apollo-portal target文件，上传到服务器，依次也放到对应的目录，然后使用 docker-compose up 启动
-####|_ _/root/apollo/
-####|_ _ _ _ _ _ _ _/apollo-adminservice
-####|_ _ _ _ _ _ _ _/apollo-configservice
-####|_ _ _ _ _ _ _ _/apollo-portal
-####|_ _ _ _ _ _ _ _/docker-compose.yml
-#======================================================
+  * 将打包好的 apollo-adminservice  apollo-configservice  apollo-portal target文件，上传到服务器，依次也放到对应的目录，然后使用 docker-compose up 启动
+  * |_ _/root/apollo/
+  * |_ _ _ _ _ _ _ _/apollo-adminservice
+  * |_ _ _ _ _ _ _ _/apollo-configservice
+  * |_ _ _ _ _ _ _ _/apollo-portal
+  * |_ _ _ _ _ _ _ _/docker-compose.yml
+# ======================================================
 
 
 
