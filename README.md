@@ -34,7 +34,7 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 * **2.然后安装mysql**
 
   * docker pull mysql:5.7
-  * docker run -p 13306:3306 --name mysql -v /root/mysql/conf:/etc/mysql/conf.d -v /root/mysql/logs:/logs -v /root/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+  * docker run -p 3306:3306 --name mysql -v /root/mysql/conf:/etc/mysql/conf.d -v /root/mysql/logs:/logs -v /root/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
 
 * **3.然后安装apollo**
 
