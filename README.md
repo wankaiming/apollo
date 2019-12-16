@@ -34,16 +34,24 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 * **2.然后安装mysql**
 
   * docker pull mysql:5.7
+  * 新建目录/root/mysql/conf，并创建配置文件my.cnf
+  * 添加内容
+  * [mysqld]
+  * sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
   * docker run -p 3306:3306 --name mysql -v /root/mysql/conf:/etc/mysql/conf.d -v /root/mysql/logs:/logs -v /root/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+  * 然后导入apollo\scripts\sql目录下的初始化脚本
 
 * **3.然后安装apollo**
 
-  * 将打包好的 apollo-adminservice  apollo-configservice  apollo-portal target文件，上传到服务器，依次也放到对应的目录，然后使用 docker-compose up 启动
+  * 将打包好的 apollo-adminservice  apollo-configservice  apollo-portal target下的jar和zip文件以及src\main\docker\Dockerfile，上传到服务器，依次也放到对应的目录，然后使用 docker-compose up 启动
   * |_ _/root/apollo/
   * |_ _ _ _ _ _ _ _/apollo-adminservice
   * |_ _ _ _ _ _ _ _/apollo-configservice
   * |_ _ _ _ _ _ _ _/apollo-portal
   * |_ _ _ _ _ _ _ _/docker-compose.yml
+  
+  
+* **4.登录后台 http://ip:8070/  账号 apollo 密码 admin**
 # ======================================
 
 

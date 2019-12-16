@@ -1,17 +1,17 @@
 @echo off
 
 rem apollo config db info
-set apollo_config_db_url="jdbc:mysql://192.168.96.132:13306/ApolloConfigDB?characterEncoding=utf8"
+set apollo_config_db_url="jdbc:mysql://192.168.25.129:3306/ApolloConfigDB?characterEncoding=utf8"
 set apollo_config_db_username="root"
 set apollo_config_db_password="123456"
 
 rem apollo portal db info
-set apollo_portal_db_url="jdbc:mysql://192.168.96.132:13306/ApolloPortalDB?characterEncoding=utf8"
+set apollo_portal_db_url="jdbc:mysql://192.168.25.129:3306/ApolloPortalDB?characterEncoding=utf8"
 set apollo_portal_db_username="root"
 set apollo_portal_db_password="123456"
 
 rem meta server url, different environments should have different meta server addresses
-set dev_meta="http://192.168.96.132:8080"
+set dev_meta="http://192.168.25.129:8080"
 set fat_meta="http://someIp:8080"
 set uat_meta="http://anotherIp:8080"
 set pro_meta="http://yetAnotherIp:8080"
